@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %bundleName
+Bundle-SymbolicName: org.junit.platform.commons
+Bundle-Version: 1.8.1.v20211018-1956
+Bundle-ClassPath: org.junit.platform.commons_1.8.1.v20211018-1956.jar
+Bundle-Vendor: %bundleVendor
+Export-Package: org.junit.platform.commons;status=STABLE;version="1.8.1";uses:="org.apiguardian.api,org.junit.platform.commons.util",
+ org.junit.platform.commons.annotation;status=STABLE;version="1.8.1";uses:="org.apiguardian.api",
+ org.junit.platform.commons.function;status=MAINTAINED;version="1.8.1";uses:="org.apiguardian.api",
+ org.junit.platform.commons.logging;status=INTERNAL;version="1.8.1";uses:="org.apiguardian.api",
+ org.junit.platform.commons.support;status=MAINTAINED;version="1.8.1";uses:="org.apiguardian.api,org.junit.platform.commons,org.junit.platform.commons.function",
+ org.junit.platform.commons.util;status=DEPRECATED;version="1.8.1";uses:="org.apiguardian.api,org.junit.platform.commons,org.junit.platform.commons.function"
+Build-Time: 20:54:36.897+0200
+Implementation-Vendor: junit.org
+Automatic-Module-Name: org.junit.platform.commons
+Specification-Vendor: junit.org
+Implementation-Version: 1.8.1
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Built-By: default
+Build-Jdk: 11.0.9
+Multi-Release: true
+Import-Package: org.apiguardian.api;version="[1.1.2,2)",
+ org.junit.platform.commons;version="[1.8,2)";resolution:=optional,
+ org.junit.platform.commons.function;version="[1.8,2)";resolution:=optional,
+ org.junit.platform.commons.logging;version="[1.8,2)";resolution:=optional,
+ org.junit.platform.commons.util;version="[1.8,2)";resolution:=optional
+Implementation-Title: junit-platform-commons
+Originally-Created-By: 11.0.12 (Eclipse Foundation 11.0.12+7)
+Build-Date: 2021-09-22
+Created-By: Eclipse Bundle Recipe Maven Plug-in
+Build-Revision: 9883ffa5ab9ddb27ce33f6d2ace9f6be16403f40
+Specification-Title: junit-platform-commons
+Specification-Version: 1.8.1

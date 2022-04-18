@@ -3,15 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Boleto;
+package src.Boleto;
 
 /**
  *
  * @author Aluno
  */
 class Pagamento {
-    void setvalor(double d) {
+	
+    private double valor;
+	private String data;
+
+
+	public void setvalor(double d) {
+    	this.valor=d;
         }
-void setdata(String data) {
+public void setdata(String data) {
+	this.data=data;
     }
+public Object getdata() {
+	// TODO Auto-generated method stub
+	return data;
+}
+
+
+public Object getvalor() {
+	// TODO Auto-generated method stub
+	return valor;
+}
+
 }

@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.pde.junit.runtime;singleton:=true
+Bundle-Version: 3.6.100.v20211112-1151
+Bundle-ClassPath: org.eclipse.pde.junit.runtime_3.6.100.v20211112-1151.jar
+Bundle-Activator: org.eclipse.pde.internal.junit.runtime.PDEJUnitRuntimePlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.pde.internal.junit.runtime;x-internal:=true
+Require-Bundle: org.eclipse.jdt.junit.runtime;bundle-version="[3.5.0,4.0.0)",
+ org.junit;bundle-version="3.8.2",
+ org.eclipse.core.runtime;bundle-version="[3.11.0,4.0.0)",
+ org.eclipse.ui;bundle-version="[3.2.0,4.0.0)";resolution:=optional
+Automatic-Module-Name: org.eclipse.pde.junit.runtime
+Eclipse-SourceReferences: scm:git:https://git.eclipse.org/r/pde/eclipse.pde.ui.git;path="ui/org.eclipse.pde.junit.runtime";tag="I20211112-2030";commitId=7cbb11e89e9df7a8c717ff50186951017824c4ba
+Created-By: Maven Archiver 3.5.0
+Build-Jdk-Spec: 11
+Import-Package: org.eclipse.ui.testing;resolution:=optional
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-11

@@ -3,21 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Boleto;
+package src.Boleto;
 
-/**
- *
- * @author Aluno
- */
-class Boleto extends Pagamento{
 
-    void setcodigo(String codigo) {
-      
-    }
+public class Boleto extends Pagamento{
+	private String codigo;
 
-    Object getcodigo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public void setcodigo(String codigo) {
+      this.codigo=codigo;
+    } 
+    
+
+	public Object getcodigo() {
+		return codigo;
+	}
+
+
+	
+   
 
     
 

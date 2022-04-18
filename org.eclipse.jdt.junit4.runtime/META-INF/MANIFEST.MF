@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.jdt.junit4.runtime;singleton:=true
+Bundle-Version: 1.2.0.v20210326-1251
+Bundle-ClassPath: org.eclipse.jdt.junit4.runtime_1.2.0.v20210326-1251.jar
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.jdt.internal.junit4.runner;x-internal:=true
+Require-Bundle: org.junit;bundle-version="4.7.0",
+ org.eclipse.jdt.junit.runtime;bundle-version="[3.5.0,4.0.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Build-Jdk-Spec: 11
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/jdt/eclipse.jdt.ui.git;path="org.eclipse.jdt.junit4.runtime";tag="I20210326-1800";commitId=e035264e84e484e8c55c19838f0bff8eecb8b42f
+Created-By: Maven Archiver 3.5.0
+Automatic-Module-Name: org.eclipse.jdt.junit4.runtime

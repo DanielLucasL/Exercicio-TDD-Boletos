@@ -1,37 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Boleto;
+package test.Boleto;
+import src.Boleto.Boleto;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertAll;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
-/**
- *
- * @author Aluno
- */
 public class BoletoTest {
-        Boleto boleto;
-	@Before
-	public void inicializa() {
-           boleto = new Boleto();
-	}
-	
-	@Test
-	public void testVertamanho() {
-        String codigo="A32B";
-        String data="14/02/2009";
-        boleto.setcodigo(codigo);
-        boleto.setvalor(500.00);
-        boleto.setdata("14/02/2009");
-		assertEquals(codigo, boleto.getcodigo());
-                assertEquals(valor, boleto.getvalor());
-                assertEquals(data, boleto.getdata());
-	}
+
+    Boleto boleto;
+@BeforeEach
+public void inicializa() {
+       boleto = new Boleto();
+}
+
+
+
+@Test
+public void testChegararmazenamento() {
+	boleto.setcodigo("A32B");
+	boleto.setvalor(500.00);
+	boleto.setdata("14/02/2009");
+    assertAll("boleto", () -> assertEquals("A32B", boleto.getcodigo()),
+            () -> assertEquals("14/02/2009", boleto.getdata()), () -> assertEquals("500.0", boleto.getvalor().toString()));
+            
+}
+
 }
