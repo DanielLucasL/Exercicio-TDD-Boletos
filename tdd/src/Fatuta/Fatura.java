@@ -1,10 +1,15 @@
 package src.Fatuta;
 
+import java.util.ArrayList;
+
+import src.Boleto.Boleto;
+
 public class Fatura {
 
 	private String nomedocliente;
 	private String data;
 	private double valortotal;
+	
 
 	public void setnomedocliente(String nomedocliente) {
 		// TODO Auto-generated method stub
@@ -37,6 +42,11 @@ public class Fatura {
 	public Object getvalortotal() {
 		// TODO Auto-generated method stub
 		return valortotal;
+	}
+
+	public Boolean pagar(ArrayList<Boleto> boletos) {
+		
+		return null;
 	}
 
 }
