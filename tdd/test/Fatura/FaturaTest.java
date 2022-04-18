@@ -5,9 +5,12 @@
  */
 package test.Fatura;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
@@ -81,6 +84,22 @@ public void testChegarpagamento3() {
 	boletos.get(0).setvalor(500.00);
 	boletos.get(1).setvalor(400.00);
 	assertEquals(false, fatura.pagar(boletos));
+}
+@Test
+public void testChegarpagamentoscriados() {
+	fatura.setvalortotal(1500.00);
+	ArrayList<Boleto> boletos = new ArrayList<Boleto>();
+	Boleto boleto1=new Boleto();
+	Boleto boleto2=new Boleto();
+	Boleto boleto3=new Boleto();
+	boletos.add(boleto1);
+	boletos.add(boleto2);
+	boletos.add(boleto3);
+	boletos.get(0).setvalor(1000.00);
+	boletos.get(1).setvalor(500.00);
+	boletos.get(2).setvalor(250.00);
+	fatura.pagar(boletos);
+	assertIterableEquals(boletos, fatura.getboletos());
 }
     
 }

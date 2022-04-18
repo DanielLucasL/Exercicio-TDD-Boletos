@@ -68,4 +68,9 @@ public class Fatura {
 		return pago;
 	}
 
+	public ArrayList<Boleto> getboletos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
