@@ -70,5 +70,17 @@ public void testChegarpagamento2() {
 	boletos.get(2).setvalor(250.00);
 	assertEquals(true, fatura.pagar(boletos));
 }
+@Test
+public void testChegarpagamento3() {
+	fatura.setvalortotal(2000.00);
+	ArrayList<Boleto> boletos = new ArrayList<Boleto>();
+	Boleto boleto1=new Boleto();
+	Boleto boleto2=new Boleto();
+	boletos.add(boleto1);
+	boletos.add(boleto2);
+	boletos.get(0).setvalor(500.00);
+	boletos.get(1).setvalor(400.00);
+	assertEquals(false, fatura.pagar(boletos));
+}
     
 }
