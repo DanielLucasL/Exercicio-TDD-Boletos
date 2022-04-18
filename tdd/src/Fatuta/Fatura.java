@@ -70,7 +70,7 @@ public class Fatura {
 
 	public ArrayList<Boleto> getboletos() {
 		// TODO Auto-generated method stub
-		return null;
+		return boletos;
 	}
 
 }
