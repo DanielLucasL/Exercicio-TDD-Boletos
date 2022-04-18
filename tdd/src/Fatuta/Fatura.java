@@ -9,6 +9,8 @@ public class Fatura {
 	private String nomedocliente;
 	private String data;
 	private double valortotal;
+	private ArrayList<Boleto> boletos;
+	private Boolean pago;
 	
 
 	public void setnomedocliente(String nomedocliente) {
@@ -46,7 +48,24 @@ public class Fatura {
 
 	public Boolean pagar(ArrayList<Boleto> boletos) {
 		
-		return null;
+		if(this.boletos==null) {
+			this.boletos=boletos;
+		}
+		else {
+			this.boletos.addAll(boletos);
+		}
+		double valorpago=0;
+		double valorparcial=0;
+		for(int count=boletos.size()-1; count >= 0; count--){
+		    valorparcial=Double.parseDouble(boletos.get(count).getvalor().toString());
+			valorpago=valorparcial+valorpago;
+        }
+		if(valorpago>=valortotal) {
+			pago=true;
+		}else {
+			pago=false;
+		}
+		return pago;
 	}
 
 }
