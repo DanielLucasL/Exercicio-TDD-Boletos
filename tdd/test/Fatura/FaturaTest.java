@@ -31,8 +31,8 @@ public void testChegararmazenamento() {
 	fatura.setnomedocliente("Daniel");
 	fatura.setdata("04/02/2009");
 	fatura.setvalortotal(50000.00);
-    assertAll("boleto", () -> assertEquals("A32B", fatura.getnomedocliente()),
-            () -> assertEquals("14/02/2009", fatura.getdata()), () -> assertEquals("50000.0", fatura.getvalortotal().toString()));
+    assertAll("boleto", () -> assertEquals("Daniel", fatura.getnomedocliente()),
+            () -> assertEquals("04/02/2009", fatura.getdata()), () -> assertEquals("50000.0", fatura.getvalortotal().toString()));
             
 }
     
